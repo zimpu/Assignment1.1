@@ -1,0 +1,80 @@
+[acadgild@localhost ~]$ jps
+4746 JobHistoryServer
+14110 Jps
+[acadgild@localhost ~]$ start-all.sh
+This script is Deprecated. Instead use start-dfs.sh and start-yarn.sh
+17/01/26 04:17:45 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Starting namenodes on [localhost]
+localhost: starting namenode, logging to /usr/local/hadoop-2.6.0/logs/hadoop-acadgild-namenode-localhost.localdomain.out
+localhost: starting datanode, logging to /usr/local/hadoop-2.6.0/logs/hadoop-acadgild-datanode-localhost.localdomain.out
+Starting secondary namenodes [0.0.0.0]
+0.0.0.0: starting secondarynamenode, logging to /usr/local/hadoop-2.6.0/logs/hadoop-acadgild-secondarynamenode-localhost.localdomain.out
+17/01/26 04:18:03 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+starting yarn daemons
+starting resourcemanager, logging to /usr/local/hadoop-2.6.0/logs/yarn-acadgild-resourcemanager-localhost.localdomain.out
+localhost: starting nodemanager, logging to /usr/local/hadoop-2.6.0/logs/yarn-acadgild-nodemanager-localhost.localdomain.out
+[acadgild@localhost ~]$ jps
+14771 NodeManager
+14665 ResourceManager
+14921 Jps
+4746 JobHistoryServer
+14363 DataNode
+14236 NameNode
+14525 SecondaryNameNode
+[acadgild@localhost ~]$ pig
+2017-01-26 04:18:46,035 INFO  [main] pig.ExecTypeProvider: Trying ExecType : LOCAL
+2017-01-26 04:18:46,035 INFO  [main] pig.ExecTypeProvider: Trying ExecType : MAPREDUCE
+2017-01-26 04:18:46,035 INFO  [main] pig.ExecTypeProvider: Picked MAPREDUCE as the ExecType
+2017-01-26 04:18:46,101 [main] INFO  org.apache.pig.Main - Apache Pig version 0.14.0 (r1640057) compiled Nov 16 2014, 18:02:05
+2017-01-26 04:18:46,101 [main] INFO  org.apache.pig.Main - Logging error messages to: /home/acadgild/pig_1485384526100.log
+2017-01-26 04:18:46,131 [main] INFO  org.apache.pig.impl.util.Utils - Default bootup file /home/acadgild/.pigbootup not found
+2017-01-26 04:18:46,496 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - mapred.job.tracker is deprecated. Instead, use mapreduce.jobtracker.address
+2017-01-26 04:18:46,496 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - fs.default.name is deprecated. Instead, use fs.defaultFS
+2017-01-26 04:18:46,496 [main] INFO  org.apache.pig.backend.hadoop.executionengine.HExecutionEngine - Connecting to hadoop file system at: hdfs://localhost:9000
+2017-01-26 04:18:46,500 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - mapred.used.genericoptionsparser is deprecated. Instead, use mapreduce.client.genericoptionsparser.used
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/usr/local/hbase/lib/slf4j-log4j12-1.6.4.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/local/hadoop-2.6.0/share/hadoop/common/lib/slf4j-log4j12-1.7.5.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+2017-01-26 04:18:46,822 [main] WARN  org.apache.hadoop.util.NativeCodeLoader - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2017-01-26 04:18:47,394 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - fs.default.name is deprecated. Instead, use fs.defaultFS
+grunt> 
+grunt> [acadgild@localhost ~]$ 
+[acadgild@localhost ~]$ sudo service mysqld start
+[sudo] password for acadgild: 
+Starting mysqld:                                           [  OK  ]
+[acadgild@localhost ~]$ hive
+
+Logging initialized using configuration in jar:file:/usr/local/hive/lib/hive-common-0.14.0.jar!/hive-log4j.properties
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/usr/local/hive/lib/hive-jdbc-0.14.0-standalone.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/local/hadoop-2.6.0/share/hadoop/common/lib/slf4j-log4j12-1.7.5.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+hive> [acadgild@localhost ~]$ 
+[acadgild@localhost ~]$ jps
+15490 Jps
+14771 NodeManager
+14665 ResourceManager
+4746 JobHistoryServer
+14363 DataNode
+14236 NameNode
+14525 SecondaryNameNode
+[acadgild@localhost ~]$ start -hbase.sh
+start: invalid option: -h
+Try `start --help' for more information.
+[acadgild@localhost ~]$ start-hbase.sh
+starting master, logging to /usr/local/hbase/logs/hbase-acadgild-master-localhost.localdomain.out
+[acadgild@localhost ~]$ start-hbase.sh
+master running as process 15605. Stop it first.
+[acadgild@localhost ~]$ jps
+15952 Jps
+14771 NodeManager
+15605 HMaster
+14665 ResourceManager
+4746 JobHistoryServer
+14363 DataNode
+14236 NameNode
+14525 SecondaryNameNode
+[acadgild@localhost ~]$ 
+
